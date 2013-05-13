@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{829069BC-8AF1-4F97-B360-9113BA3525A9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>crazyDict</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>crazyDict</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>smile.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CharsMode.cs" />
+    <Compile Include="encrypt\DESCrypt.cs" />
+    <Compile Include="encrypt\MD5Crypt.cs" />
+    <Compile Include="encrypt\RC2Crypt.cs" />
+    <Compile Include="encrypt\RijndaelCrypt.cs" />
+    <Compile Include="encrypt\RSACrypt.cs" />
+    <Compile Include="encrypt\SingleCrypt.cs" />
+    <Compile Include="mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="Properties\Settings.Designer.cs" />
+    <Compile Include="control\ucChooseDate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\ucChooseDate.Designer.cs">
+      <DependentUpon>ucChooseDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\ucDirectoryOpen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\ucDirectoryOpen.Designer.cs">
+      <DependentUpon>ucDirectoryOpen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\ucFileOpen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\ucFileOpen.Designer.cs">
+      <DependentUpon>ucFileOpen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\ucFileSave.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="control\ucFileSave.Designer.cs">
+      <DependentUpon>ucFileSave.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="control\ucChooseDate.resx">
+      <DependentUpon>ucChooseDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\ucDirectoryOpen.resx">
+      <DependentUpon>ucDirectoryOpen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\ucFileOpen.resx">
+      <DependentUpon>ucFileOpen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control\ucFileSave.resx">
+      <DependentUpon>ucFileSave.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="commonDict\高频 英语单词列表 全部小写.dic" />
+    <None Include="稀饭字典模块设计.docx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="commonDict\easy.txt" />
+    <Content Include="commonDict\Gre单词列表.txt" />
+    <Content Include="commonDict\全部汉字拼音 列表 首字母大写.txt" />
+    <Content Include="smile.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dll\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\xifanClass\xfLib.csproj">
+      <Project>{DBA93340-BB3B-4EFC-98B2-3D9337AA235C}</Project>
+      <Name>xfLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
