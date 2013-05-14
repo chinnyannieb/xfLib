@@ -41,13 +41,19 @@ namespace testForm
 
         private void printDoc_PrintPage(object sender, PrintPageEventArgs e)
         {
-            e.Graphics.DrawRectangle(System.Drawing.Pens.Aquamarine, 20,20,500,500);
+            e.Graphics.DrawRectangle(System.Drawing.Pens.Aquamarine, 20, 20, 500, 500);
         }
 
         private void btnPageSet_Click(object sender, EventArgs e)
         {
-            //先监测打印机是否存在
-            psDlg.ShowDialog();
+            try
+            {
+                psDlg.ShowDialog();
+            }
+            catch (InvalidPrinterException)
+            {
+                MessageBox.Show("cannot find the printer");
+            }
         }
 
         private void btnPrint_Click(object sender, EventArgs e)

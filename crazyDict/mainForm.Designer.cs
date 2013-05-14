@@ -1215,6 +1215,7 @@ namespace crazyDict
             this.MaximizeBox = false;
             this.Name = "mainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "CrazyDict";
             this.Load += new System.EventHandler(this.mainForm_Load);
             this.gpbPreview.ResumeLayout(false);
             this.gpbPreview.PerformLayout();

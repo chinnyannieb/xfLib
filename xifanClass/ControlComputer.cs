@@ -9,12 +9,12 @@ using System.Windows.Forms;
 namespace xf
 {
     /// <summary>
-    /// 操作电脑的一些类
+    /// Util functions to control the computer
     /// </summary>
     public class ControlComputer
     {
 
-        #region 强制关机
+        #region force shutdown the pc
 
         [DllImport("advapi32.dll", EntryPoint = "OpenProcessToken", CharSet = CharSet.Ansi)]
         private static extern int OpenProcessToken(IntPtr ProcessHandle, int DesiredAccess, ref IntPtr TokenHandle);
@@ -70,9 +70,8 @@ namespace xf
 
         [DllImport("user32.dll", EntryPoint = "ExitWindowsEx", CharSet = CharSet.Ansi)]
         private static extern int ExitWindowsEx(int uFlags, int dwReserved);
-
         /// <summary>
-        /// 强制关机函数，请谨慎调用此函数
+        /// 
         /// </summary>
         public static void CloseComputer()
         {
@@ -95,7 +94,7 @@ namespace xf
         }
         #endregion
 
-        #region 截取整个屏幕
+        #region screen shot
 
         [DllImport("user32.dll")]
         private extern static IntPtr GetDesktopWindow();
@@ -134,7 +133,7 @@ namespace xf
 
         #endregion
 
-        #region 鼠标操作
+        #region Mouse Manipulate
 
         const int MOUSEEVENTF_LEFTDOWN = 0x2;              //左键下去
         const int MOUSEEVENTF_LEFTUP = 0x4;                 //    左键上来

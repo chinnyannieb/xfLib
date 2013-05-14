@@ -75,7 +75,7 @@
     <Compile Include="xfText.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="编码规范.txt" />
+    <Content Include="readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
