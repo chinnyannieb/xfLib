@@ -131,13 +131,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="commonDict\高频 英语单词列表 全部小写.dic" />
     <None Include="稀饭字典模块设计.docx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="commonDict\easy.txt" />
-    <Content Include="commonDict\Gre单词列表.txt" />
-    <Content Include="commonDict\全部汉字拼音 列表 首字母大写.txt" />
+    <Content Include="commonDict\easyPassword.txt" />
+    <Content Include="commonDict\GREwordList.txt" />
+    <Content Include="commonDict\pinyin.txt" />
     <Content Include="smile.ico" />
   </ItemGroup>
   <ItemGroup>
